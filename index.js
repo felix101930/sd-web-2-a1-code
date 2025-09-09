@@ -124,4 +124,3 @@ renderNamesList(brokenUsers, "error-handling-list", "error-messages");
 // 6. Test your error handling by creating a second array that's intentionally broken (missing name properties) and passing it to your functions. Verify that your error handling works correctly and displays errors in the div with id "broken-array-errors"
 
 // Test the renderFilterList function with broken data
-renderFilterList(brokenUsers, 50, "broken-array-list", "broken-array-errors");
