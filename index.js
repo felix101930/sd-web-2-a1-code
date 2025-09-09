@@ -98,9 +98,9 @@ renderFilterList(users, 100, "age-filter-list");
 // 6. Test your error handling by creating a second array that's intentionally broken (missing name properties) and passing it to your functions. Verify that your error handling works correctly and displays errors in the div with id "broken-array-errors"
 const brokenUsers = [
     { id: 1, age: 25 },                    
-    { id: 2, name: "Valid User", age: 28 }, 
+    { id: 2, name: "Lionel Messi", age: 28 }, 
     { id: 3 },                           
-    { id: 4, name: "Another Valid", age: 34 },
+    { id: 4, name: "Cristiano Ronaldo", age: 34 },
     { age: 40 }                          
 ];
 
