@@ -14,20 +14,42 @@ body {
 }
 
 /* Header styles */
-header {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+h1 {
+  font-size: 2.5rem;
   color: white;
-  padding: 2rem;
-  border-radius: 8px;
-  margin-bottom: 2rem;
   text-align: center;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background: linear-gradient(135deg, #6366f1 0%, #7c3aed 50%, #c026d3 100%);
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(124, 58, 237, 0.3);
+  font-weight: 600;
+  letter-spacing: -0.5px;
+  line-height: 1.3;
+  text-transform: uppercase;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
 }
 
-header h1 {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
-  font-weight: 300;
+h1:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(124, 58, 237, 0.4);
+}
+
+h1::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: 0.5s;
+}
+
+h1:hover::before {
+  left: 100%;
 }
 
 header p {
