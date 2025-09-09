@@ -53,8 +53,6 @@ users.filter(user => user.age < 40).forEach(user => {
 } );
 
 
-
-
 // Helper function to handle error reporting
 function reportError(errorContainer, message) {
   console.error(message);
@@ -69,12 +67,6 @@ function renderNamesList(array, listId, errorId) {
   const listElement = document.getElementById(listId);
   const errorContainer = errorId ? document.getElementById(errorId) : null;
   
-  // Clear previous content before rendering
-  listElement.innerHTML = "";
-  if (errorContainer) {
-    errorContainer.innerHTML = "";
-  }
-
  array.forEach((item) => {
     // Check if the item is a valid object with a 'name' property
     if (item.hasOwnProperty('name')) {
@@ -93,12 +85,6 @@ renderNamesList(users, "function-list");
 function renderFilterList(array, ageThreshold, listId, errorId) {
   const listElement = document.getElementById(listId);
   const errorContainer = errorId ? document.getElementById(errorId) : null;
-
-  // Clear previous content
-  listElement.innerHTML = "";
-  if (errorContainer) {
-    errorContainer.innerHTML = "";
-  }
 
   array.forEach((item) => {
     // Check if item is valid before filtering and rendering
@@ -121,6 +107,3 @@ renderFilterList(users, 100, "age-filter-list");
 renderNamesList(brokenUsers, "error-handling-list", "error-messages");
 
 
-// 6. Test your error handling by creating a second array that's intentionally broken (missing name properties) and passing it to your functions. Verify that your error handling works correctly and displays errors in the div with id "broken-array-errors"
-
-// Test the renderFilterList function with broken data
