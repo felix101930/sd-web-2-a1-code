@@ -26,7 +26,6 @@ const brokenUsers = [
 
 // 1. Print out the names of each character in the console, then render them in the HTML list with id "names-list"
 users.forEach((user) => {
-
   console.log(user.name);
 });
 
@@ -42,7 +41,6 @@ users.forEach((user) => {
 users.filter(user => user.age < 40).forEach(user => {
   console.log(user.name);
 });
-
 
 const youngCharactersList = document.getElementById("young-characters-list");
 
@@ -73,8 +71,7 @@ function renderNamesList(array, listId, errorId) {
       const listItem = document.createElement("li");
       listItem.textContent = item.name;
       listElement.appendChild(listItem);
-    } else if (errorContainer) {
-      // Only report an error if an error container is provided
+    } else {
       reportError(errorContainer, "Error: Object is missing the name property");
     }
   });
@@ -94,8 +91,7 @@ function renderFilterList(array, ageThreshold, listId, errorId) {
         listItem.textContent = item.name;
         listElement.appendChild(listItem);
       }
-    } else if (errorContainer) {
-      // If the item is broken, report an error
+    } else  {
       reportError(errorContainer, "Error: Object is missing the name property");
     }
   });
